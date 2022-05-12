@@ -19,6 +19,8 @@ Using this package allows you to get rid of the need to use EntityFramework and 
     <PackageProjectUrl>https://www.nuget.org/profiles/miker.laz903</PackageProjectUrl>
     <PackageTags>C#, Database, Async, Sync</PackageTags>
     <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <RepositoryUrl>https://github.com/mikerlaz903/NDatabase</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
 </Project>
