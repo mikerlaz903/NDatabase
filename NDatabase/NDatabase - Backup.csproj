@@ -22,6 +22,8 @@ Using this package allows you to get rid of the need to use EntityFramework and 
     <AssemblyVersion>1.0.1.0</AssemblyVersion>
     <RepositoryUrl>https://github.com/mikerlaz903/NDatabase</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <PackageLicenseFile>C:\Users\Miker\source\repos\NDatabase\NDatabase\License.txt</PackageLicenseFile>
   </PropertyGroup>
 
 </Project>
