@@ -5,8 +5,20 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Authors>miker.laz903@gmail.com</Authors>
-    <Company />
+    <Authors>Mihail Lazarenko</Authors>
+    <Company>miker.laz903@gmail.com</Company>
+    <PackageId>$(AssemblyName).Helper</PackageId>
+    <Description>A package to simplify working with databases.
+
+Includes methods for synchronous and asynchronous work with received data. It also implements 3 methods of work:
+- Receiving data on demand.
+- Receiving all the data on the first call.
+- Receiving part of the data when accessing.
+
+Using this package allows you to get rid of the need to use EntityFramework and write your own libraries to work with the database.</Description>
+    <PackageProjectUrl>https://www.nuget.org/profiles/miker.laz903</PackageProjectUrl>
+    <PackageTags>C#, Database, Async, Sync</PackageTags>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
   </PropertyGroup>
 
 </Project>
