@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -22,6 +22,13 @@ Using this package allows you to get rid of the need to use EntityFramework and 
     <AssemblyVersion>1.0.1.0</AssemblyVersion>
     <RepositoryUrl>https://github.com/mikerlaz903/NDatabase</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Copyright>https://github.com/mikerlaz903</Copyright>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Parameters\" />
+  </ItemGroup>
 
 </Project>

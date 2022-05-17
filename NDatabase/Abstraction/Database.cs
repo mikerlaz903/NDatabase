@@ -14,7 +14,9 @@ namespace NDatabase.Abstraction
 
 
         public abstract void Commit();
+        public abstract void CommitAsync();
         public abstract void Rollback();
+        public abstract void RollbackAsync();
 
         public abstract void RollbackAndClose();
 

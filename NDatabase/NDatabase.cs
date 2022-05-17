@@ -20,11 +20,13 @@ namespace NDatabase
             _connection = connection;
             _connection.Open();
             _transaction = _connection.BeginTransaction(isolation);
+            SetFromDelegate();
         }
 
         public NDatabase(DbConnection connection, NDatabaseSource source) : this(connection)
         {
             _source = source;
+            SetFromDelegate();
         }
         public override DbConnection? GetConnection()
             => _connection;
@@ -118,14 +120,31 @@ namespace NDatabase
                 return;
 
             _transaction.Commit();
-            // поскольку транзакция читающая, 
-            // мы её сразу заново запускаем
-            _transaction = _connection?.BeginTransaction();
+        }
+        public override async void CommitAsync()
+        {
+            if (_transaction?.Connection == null)
+                return;
+
+            await _transaction.CommitAsync();
         }
         /// <summary>
         /// Отмена изменений.
         /// </summary>
-        public override void Rollback() => _transaction?.Rollback();
+        public override void Rollback()
+        {
+            if (_transaction?.Connection == null)
+                return;
+            _transaction.Rollback();
+        }
+
+        public override async void RollbackAsync()
+        {
+            if (_transaction?.Connection == null)
+                return;
+            await _transaction.RollbackAsync();
+        }
+
         /// <summary>
         /// Отмена изменений и закрытие соединения.
         /// </summary>
